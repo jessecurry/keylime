@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B06372A11803435700C0BAB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A01803435700C0BAB7 /* Foundation.framework */; };
+		B06372A31803435700C0BAB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A21803435700C0BAB7 /* CoreGraphics.framework */; };
+		B06372A51803435700C0BAB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A41803435700C0BAB7 /* UIKit.framework */; };
+		B06372A71803435700C0BAB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A61803435700C0BAB7 /* CoreData.framework */; };
+		B06372AD1803435700C0BAB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B06372AB1803435700C0BAB7 /* InfoPlist.strings */; };
+		B06372AF1803435700C0BAB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B06372AE1803435700C0BAB7 /* main.m */; };
+		B06372B31803435700C0BAB7 /* KLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B06372B21803435700C0BAB7 /* KLAppDelegate.m */; };
+		B06372B61803435700C0BAB7 /* keylime_example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B06372B41803435700C0BAB7 /* keylime_example.xcdatamodeld */; };
+		B06372B81803435700C0BAB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06372B71803435700C0BAB7 /* Images.xcassets */; };
+		B06372BF1803435700C0BAB7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372BE1803435700C0BAB7 /* XCTest.framework */; };
+		B06372C01803435700C0BAB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A01803435700C0BAB7 /* Foundation.framework */; };
+		B06372C11803435700C0BAB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A41803435700C0BAB7 /* UIKit.framework */; };
+		B06372C21803435700C0BAB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06372A61803435700C0BAB7 /* CoreData.framework */; };
+		B06372CA1803435700C0BAB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B06372C81803435700C0BAB7 /* InfoPlist.strings */; };
+		B06372CC1803435700C0BAB7 /* keylime_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B06372CB1803435700C0BAB7 /* keylime_exampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B06372C31803435700C0BAB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06372951803435700C0BAB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B063729C1803435700C0BAB7;
+			remoteInfo = "keylime-example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B063729D1803435700C0BAB7 /* keylime-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "keylime-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06372A01803435700C0BAB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B06372A21803435700C0BAB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B06372A41803435700C0BAB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B06372A61803435700C0BAB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B06372AA1803435700C0BAB7 /* keylime-example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "keylime-example-Info.plist"; sourceTree = "<group>"; };
+		B06372AC1803435700C0BAB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B06372AE1803435700C0BAB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B06372B01803435700C0BAB7 /* keylime-example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "keylime-example-Prefix.pch"; sourceTree = "<group>"; };
+		B06372B11803435700C0BAB7 /* KLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAppDelegate.h; sourceTree = "<group>"; };
+		B06372B21803435700C0BAB7 /* KLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAppDelegate.m; sourceTree = "<group>"; };
+		B06372B51803435700C0BAB7 /* keylime_example.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = keylime_example.xcdatamodel; sourceTree = "<group>"; };
+		B06372B71803435700C0BAB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B06372BD1803435700C0BAB7 /* keylime-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "keylime-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06372BE1803435700C0BAB7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B06372C71803435700C0BAB7 /* keylime-exampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "keylime-exampleTests-Info.plist"; sourceTree = "<group>"; };
+		B06372C91803435700C0BAB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B06372CB1803435700C0BAB7 /* keylime_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = keylime_exampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B063729A1803435700C0BAB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06372A31803435700C0BAB7 /* CoreGraphics.framework in Frameworks */,
+				B06372A71803435700C0BAB7 /* CoreData.framework in Frameworks */,
+				B06372A51803435700C0BAB7 /* UIKit.framework in Frameworks */,
+				B06372A11803435700C0BAB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06372BA1803435700C0BAB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06372BF1803435700C0BAB7 /* XCTest.framework in Frameworks */,
+				B06372C21803435700C0BAB7 /* CoreData.framework in Frameworks */,
+				B06372C11803435700C0BAB7 /* UIKit.framework in Frameworks */,
+				B06372C01803435700C0BAB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B06372941803435700C0BAB7 = {
+			isa = PBXGroup;
+			children = (
+				B06372A81803435700C0BAB7 /* keylime-example */,
+				B06372C51803435700C0BAB7 /* keylime-exampleTests */,
+				B063729F1803435700C0BAB7 /* Frameworks */,
+				B063729E1803435700C0BAB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B063729E1803435700C0BAB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B063729D1803435700C0BAB7 /* keylime-example.app */,
+				B06372BD1803435700C0BAB7 /* keylime-exampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B063729F1803435700C0BAB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B06372A01803435700C0BAB7 /* Foundation.framework */,
+				B06372A21803435700C0BAB7 /* CoreGraphics.framework */,
+				B06372A41803435700C0BAB7 /* UIKit.framework */,
+				B06372A61803435700C0BAB7 /* CoreData.framework */,
+				B06372BE1803435700C0BAB7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B06372A81803435700C0BAB7 /* keylime-example */ = {
+			isa = PBXGroup;
+			children = (
+				B06372B11803435700C0BAB7 /* KLAppDelegate.h */,
+				B06372B21803435700C0BAB7 /* KLAppDelegate.m */,
+				B06372B71803435700C0BAB7 /* Images.xcassets */,
+				B06372B41803435700C0BAB7 /* keylime_example.xcdatamodeld */,
+				B06372A91803435700C0BAB7 /* Supporting Files */,
+			);
+			path = "keylime-example";
+			sourceTree = "<group>";
+		};
+		B06372A91803435700C0BAB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B06372AA1803435700C0BAB7 /* keylime-example-Info.plist */,
+				B06372AB1803435700C0BAB7 /* InfoPlist.strings */,
+				B06372AE1803435700C0BAB7 /* main.m */,
+				B06372B01803435700C0BAB7 /* keylime-example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B06372C51803435700C0BAB7 /* keylime-exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B06372CB1803435700C0BAB7 /* keylime_exampleTests.m */,
+				B06372C61803435700C0BAB7 /* Supporting Files */,
+			);
+			path = "keylime-exampleTests";
+			sourceTree = "<group>";
+		};
+		B06372C61803435700C0BAB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B06372C71803435700C0BAB7 /* keylime-exampleTests-Info.plist */,
+				B06372C81803435700C0BAB7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B063729C1803435700C0BAB7 /* keylime-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B06372CF1803435700C0BAB7 /* Build configuration list for PBXNativeTarget "keylime-example" */;
+			buildPhases = (
+				B06372991803435700C0BAB7 /* Sources */,
+				B063729A1803435700C0BAB7 /* Frameworks */,
+				B063729B1803435700C0BAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "keylime-example";
+			productName = "keylime-example";
+			productReference = B063729D1803435700C0BAB7 /* keylime-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B06372BC1803435700C0BAB7 /* keylime-exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B06372D21803435700C0BAB7 /* Build configuration list for PBXNativeTarget "keylime-exampleTests" */;
+			buildPhases = (
+				B06372B91803435700C0BAB7 /* Sources */,
+				B06372BA1803435700C0BAB7 /* Frameworks */,
+				B06372BB1803435700C0BAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B06372C41803435700C0BAB7 /* PBXTargetDependency */,
+			);
+			name = "keylime-exampleTests";
+			productName = "keylime-exampleTests";
+			productReference = B06372BD1803435700C0BAB7 /* keylime-exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B06372951803435700C0BAB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = keylime;
+				TargetAttributes = {
+					B06372BC1803435700C0BAB7 = {
+						TestTargetID = B063729C1803435700C0BAB7;
+					};
+				};
+			};
+			buildConfigurationList = B06372981803435700C0BAB7 /* Build configuration list for PBXProject "keylime-example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B06372941803435700C0BAB7;
+			productRefGroup = B063729E1803435700C0BAB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B063729C1803435700C0BAB7 /* keylime-example */,
+				B06372BC1803435700C0BAB7 /* keylime-exampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B063729B1803435700C0BAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06372AD1803435700C0BAB7 /* InfoPlist.strings in Resources */,
+				B06372B81803435700C0BAB7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06372BB1803435700C0BAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06372CA1803435700C0BAB7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B06372991803435700C0BAB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06372AF1803435700C0BAB7 /* main.m in Sources */,
+				B06372B31803435700C0BAB7 /* KLAppDelegate.m in Sources */,
+				B06372B61803435700C0BAB7 /* keylime_example.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06372B91803435700C0BAB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06372CC1803435700C0BAB7 /* keylime_exampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B06372C41803435700C0BAB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B063729C1803435700C0BAB7 /* keylime-example */;
+			targetProxy = B06372C31803435700C0BAB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B06372AB1803435700C0BAB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B06372AC1803435700C0BAB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B06372C81803435700C0BAB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B06372C91803435700C0BAB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B06372CD1803435700C0BAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B06372CE1803435700C0BAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B06372D01803435700C0BAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "keylime-example/keylime-example-Prefix.pch";
+				INFOPLIST_FILE = "keylime-example/keylime-example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B06372D11803435700C0BAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "keylime-example/keylime-example-Prefix.pch";
+				INFOPLIST_FILE = "keylime-example/keylime-example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B06372D31803435700C0BAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/keylime-example.app/keylime-example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "keylime-example/keylime-example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "keylime-exampleTests/keylime-exampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B06372D41803435700C0BAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/keylime-example.app/keylime-example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "keylime-example/keylime-example-Prefix.pch";
+				INFOPLIST_FILE = "keylime-exampleTests/keylime-exampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B06372981803435700C0BAB7 /* Build configuration list for PBXProject "keylime-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06372CD1803435700C0BAB7 /* Debug */,
+				B06372CE1803435700C0BAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B06372CF1803435700C0BAB7 /* Build configuration list for PBXNativeTarget "keylime-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06372D01803435700C0BAB7 /* Debug */,
+				B06372D11803435700C0BAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B06372D21803435700C0BAB7 /* Build configuration list for PBXNativeTarget "keylime-exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06372D31803435700C0BAB7 /* Debug */,
+				B06372D41803435700C0BAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B06372B41803435700C0BAB7 /* keylime_example.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B06372B51803435700C0BAB7 /* keylime_example.xcdatamodel */,
+			);
+			currentVersion = B06372B51803435700C0BAB7 /* keylime_example.xcdatamodel */;
+			path = keylime_example.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B06372951803435700C0BAB7 /* Project object */;
+}
