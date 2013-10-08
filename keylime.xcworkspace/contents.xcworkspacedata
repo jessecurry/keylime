@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "keylime">
-      <FileRef
-         location = "group:keylime/keylime.h">
-      </FileRef>
-      <Group
-         location = "group:keylime/Categories"
-         name = "Categories">
-      </Group>
-      <Group
-         location = "group:keylime/DataSources"
-         name = "DataSources">
-      </Group>
-      <Group
-         location = "group:keylime/Delegates"
-         name = "Delegates">
-      </Group>
-   </Group>
    <FileRef
       location = "group:keylime-example/keylime-example.xcodeproj">
    </FileRef>
