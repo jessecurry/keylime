@@ -25,6 +25,10 @@ didFinishLaunchingWithOptions: (NSDictionary*)launchOptions
     KLRootViewController* rvc = [[KLRootViewController alloc] init];
     UINavigationController* navController = [[UINavigationController alloc]
                                              initWithRootViewController: rvc];
+    self.window.tintColor = [UIColor colorWithRed: (101 / 255.0)
+                                            green: (196 / 255.0)
+                                             blue: (65 / 255.0)
+                                            alpha: 1.0];
     self.window.rootViewController = navController;
 
     self.window.backgroundColor = [UIColor whiteColor];
