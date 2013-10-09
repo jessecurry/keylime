@@ -67,6 +67,8 @@
 		B063734F1804B67800C0BAB7 /* KLTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063734D1804B67800C0BAB7 /* KLTableViewDelegate.m */; };
 		B06373541805963500C0BAB7 /* KLPassthroughTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B06373531805963500C0BAB7 /* KLPassthroughTableViewDelegate.m */; };
 		B06373551805963500C0BAB7 /* KLPassthroughTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B06373531805963500C0BAB7 /* KLPassthroughTableViewDelegate.m */; };
+		B06373A01805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */; };
+		B06373A11805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		B063734D1804B67800C0BAB7 /* KLTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTableViewDelegate.m; sourceTree = "<group>"; };
 		B06373521805963500C0BAB7 /* KLPassthroughTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLPassthroughTableViewDelegate.h; sourceTree = "<group>"; };
 		B06373531805963500C0BAB7 /* KLPassthroughTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLPassthroughTableViewDelegate.m; sourceTree = "<group>"; };
+		B063739E1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBlockTableViewDelegate.h; sourceTree = "<group>"; };
+		B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlockTableViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +395,7 @@
 			children = (
 				B063734C1804B67800C0BAB7 /* KLTableViewDelegate.h */,
 				B063734D1804B67800C0BAB7 /* KLTableViewDelegate.m */,
+				B06373A21805BDEC00C0BAB7 /* Blocks */,
 				B06373511805960700C0BAB7 /* Passthrough */,
 			);
 			name = TableView;
@@ -410,6 +415,15 @@
 				B06373531805963500C0BAB7 /* KLPassthroughTableViewDelegate.m */,
 			);
 			name = Passthrough;
+			sourceTree = "<group>";
+		};
+		B06373A21805BDEC00C0BAB7 /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				B063739E1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.h */,
+				B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */,
+			);
+			name = Blocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,6 +554,7 @@
 				B063732118035E1900C0BAB7 /* KLTableViewDataSource.m in Sources */,
 				B06373401804AB2F00C0BAB7 /* NSArrayTableViewDataSource.m in Sources */,
 				B06373451804ADF700C0BAB7 /* KLPersonTableViewCell.m in Sources */,
+				B06373A01805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m in Sources */,
 				B06373491804B5BA00C0BAB7 /* KLDelegate.m in Sources */,
 				B063733E1804A73900C0BAB7 /* KLPerson.m in Sources */,
 				B063734E1804B67800C0BAB7 /* KLTableViewDelegate.m in Sources */,
@@ -560,6 +575,7 @@
 				B0637329180365A000C0BAB7 /* NSObject+keylime.m in Sources */,
 				B06372CC1803435700C0BAB7 /* keylime_exampleTests.m in Sources */,
 				B06373461804ADF700C0BAB7 /* KLPersonTableViewCell.m in Sources */,
+				B06373A11805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m in Sources */,
 				B063734F1804B67800C0BAB7 /* KLTableViewDelegate.m in Sources */,
 				B06373251803640E00C0BAB7 /* UITableViewCell+keylime.m in Sources */,
 				B06373551805963500C0BAB7 /* KLPassthroughTableViewDelegate.m in Sources */,

@@ -37,6 +37,9 @@
 
   - (void)configureWithDataObject: (id)dataObject
   {
-    NSAssert(NO, @"[%@]please override configureWithDataObject:", NSStringFromClass([self class]));
+    self.textLabel.text = [NSString stringWithFormat: @"Class: %@",
+                           NSStringFromClass([dataObject class])];
+    self.detailTextLabel.text = [NSString stringWithFormat: @"Cell Class: %@",
+                                 NSStringFromClass([self class])];
   }
 @end

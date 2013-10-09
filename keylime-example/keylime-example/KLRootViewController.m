@@ -34,6 +34,7 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
   @property (readonly) NSArrayTableViewDataSource* arrayDataSource;
 
   // Delegates
+  @property (readonly) KLBlockTableViewDelegate* blockDelegate;
   @property (readonly) KLPassthroughTableViewDelegate* passthroughDelegate;
 @end
 
@@ -110,6 +111,8 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
              forTableView: self.tableView];
       break;
     default:
+      [self setDelegate: self.blockDelegate
+           forTableView: self.tableView];
       break;
   }
 }
@@ -141,6 +144,29 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
 }
 
 #pragma mark - Delegates
+- (KLBlockTableViewDelegate*)blockDelegate
+{
+  KLBlockTableViewDelegate* delegate =
+  [KLBlockTableViewDelegate
+   delegateWithSelectionHandler: ^(id dataObject, NSIndexPath* indexPath, UITableView* tableView) {
+     [tableView deselectRowAtIndexPath: indexPath
+                              animated: YES];
+     if ( [dataObject isKindOfClass: [KLPerson class]] )
+     {
+       KLPerson* person = (KLPerson*)dataObject;
+
+       UIAlertView* av = [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"Block: Person", @"AlertView title")
+                                                    message: person.fullName
+                                                   delegate: nil
+                                          cancelButtonTitle: NSLocalizedString(@"Wow!", @"")
+                                          otherButtonTitles: nil];
+       [av show];
+     }
+   }];
+
+  return delegate;
+}
+
 - (KLPassthroughTableViewDelegate*)passthroughDelegate
 {
   KLPassthroughTableViewDelegate* delegate = [KLPassthroughTableViewDelegate

@@ -1,4 +1,5 @@
-// keylime.h
+//
+//  KLBlockTableViewDelegate.h
 //
 // Copyright (c) 2013 jessecurry
 //
@@ -20,35 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef _KEYLIME_
-#define _KEYLIME_
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// Categories
-#import "NSObject+keylime.h"
-#import "UITableViewCell+keylime.h"
-#import "UIView+keylime.h"
-#import "UIViewController+keylime.h"
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// Data Sources
-#import "KLDataSource.h"
-
-// CollectionView
-
-// TableView
-#import "KLTableViewDataSource.h"
-#import "NSArrayTableViewDataSource.h"
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// Delegates
-#import "KLDelegate.h"
-
-// CollectionView
-
-// TableView
 #import "KLTableViewDelegate.h"
-#import "KLBlockTableViewDelegate.h"
-#import "KLPassthroughTableViewDelegate.h"
 
-#endif // _KEYLIME_
+typedef void(^KLTableViewDelegateSelectionHandler)(id dataObject, NSIndexPath* indexPath, UITableView* tableView);
+
+@interface KLBlockTableViewDelegate : KLTableViewDelegate
+  + (instancetype)delegateWithSelectionHandler: (KLTableViewDelegateSelectionHandler)selectionHandler;
+@end

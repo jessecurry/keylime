@@ -77,15 +77,10 @@
       //  reuse identifier as a convenience to the developer.
       cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle
                                     reuseIdentifier: reuseIdentifier];
-      cell.textLabel.text = [NSString stringWithFormat: @"Class: %@",
-                             NSStringFromClass([dataObject class])];;
-      cell.detailTextLabel.text = [NSString stringWithFormat: @"Reuse Identifier: %@",
-                                   reuseIdentifier];
     }
-    else
-    {
-      [cell configureWithDataObject: dataObject];
-    }
+
+    // Configure the cell.
+    [cell configureWithDataObject: dataObject];
 
     return cell;
   }
