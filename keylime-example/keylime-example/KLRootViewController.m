@@ -128,7 +128,7 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
   KLPerson* sam = [KLPerson personWithFirstName: NSLocalizedString(@"Samuel", @"Sam's first name")
                                        lastName: NSLocalizedString(@"Curry", @"Sam's last name")
                                           image: nil];
-  return @[jesse, tom, sam];
+  return @[jesse, tom, sam, @"a string", @5];
 }
 
 #pragma mark - Data Sources
