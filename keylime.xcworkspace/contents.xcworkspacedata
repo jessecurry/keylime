@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:keylime-example/.."
+      name = "keylime">
+      <FileRef
+         location = "group:keylime/keylime.h">
+      </FileRef>
+      <Group
+         location = "group:"
+         name = "Categories">
+         <FileRef
+            location = "group:keylime/NSObject+keylime.h">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/NSObject+keylime.m">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/UITableViewCell+keylime.h">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/UITableViewCell+keylime.m">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/UIView+keylime.h">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/UIView+keylime.m">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/UIViewController+keylime.h">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/UIViewController+keylime.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:"
+         name = "DataSources">
+         <FileRef
+            location = "group:keylime/KLDataSource.h">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/KLDataSource.m">
+         </FileRef>
+         <Group
+            location = "group:keylime/.."
+            name = "Collection View">
+         </Group>
+         <Group
+            location = "group:keylime/.."
+            name = "Table View">
+            <FileRef
+               location = "group:keylime/KLTableViewDataSource.h">
+            </FileRef>
+            <FileRef
+               location = "group:keylime/KLTableViewDataSource.m">
+            </FileRef>
+            <Group
+               location = "group:"
+               name = "NSArray">
+               <FileRef
+                  location = "group:keylime/NSArrayTableViewDataSource.h">
+               </FileRef>
+               <FileRef
+                  location = "group:keylime/NSArrayTableViewDataSource.m">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:"
+               name = "NSOrderedSet">
+            </Group>
+            <Group
+               location = "group:"
+               name = "NSFetchedResultsController">
+            </Group>
+         </Group>
+      </Group>
+      <Group
+         location = "group:"
+         name = "Delegates">
+         <FileRef
+            location = "group:keylime/KLDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:keylime/KLDelegate.m">
+         </FileRef>
+         <Group
+            location = "group:keylime"
+            name = "Collection View">
+         </Group>
+         <Group
+            location = "group:"
+            name = "TableView">
+            <FileRef
+               location = "group:keylime/KLTableViewDelegate.h">
+            </FileRef>
+            <FileRef
+               location = "group:keylime/KLTableViewDelegate.m">
+            </FileRef>
+            <Group
+               location = "group:"
+               name = "Passthrough">
+               <FileRef
+                  location = "group:keylime/KLPassthroughTableViewDelegate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:keylime/KLPassthroughTableViewDelegate.m">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
    <FileRef
       location = "group:keylime-example/keylime-example.xcodeproj">
    </FileRef>
