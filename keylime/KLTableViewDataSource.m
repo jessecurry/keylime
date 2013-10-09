@@ -26,63 +26,63 @@
 //
 #import "UITableViewCell+keylime.h"
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation KLTableViewDataSource
-  @synthesize tableView=_tableView;
-  
-  + (Class)tableViewCellClassForDataObject: (id)dataObject
-  {
-    Class tableViewCellClass = NSClassFromString([NSString stringWithFormat: @"%@TableViewCell",
-                                                  NSStringFromClass([dataObject class])]);
+@synthesize tableView=_tableView;
 
-    if ( tableViewCellClass == nil )
-      tableViewCellClass = [UITableViewCell class];
++ (Class)tableViewCellClassForDataObject: (id)dataObject
+{
+  Class tableViewCellClass = NSClassFromString([NSString stringWithFormat: @"%@TableViewCell",
+                                                NSStringFromClass([dataObject class])]);
 
-    return tableViewCellClass;
-  }
+  if ( tableViewCellClass == nil )
+    tableViewCellClass = [UITableViewCell class];
 
-  
+  return tableViewCellClass;
+}
+
 #pragma mark - UITableViewDataSource
-  - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView: (UITableView*)tableView
+{
+  return 1;
+}
+
+- (NSInteger)tableView: (UITableView*)tableView
+ numberOfRowsInSection: (NSInteger)section
+{
+  return 0;
+}
+
+- (UITableViewCell*)tableView: (UITableView*)tableView
+        cellForRowAtIndexPath: (NSIndexPath*)indexPath
+{
+  UITableViewCell* cell = nil;
+
+  id dataObject = [self dataObjectForIndexPath: indexPath];
+
+  // Determine the cell class for this data object
+  Class tableViewCellClass = [[self class] tableViewCellClassForDataObject: dataObject];
+
+  NSAssert([tableViewCellClass isSubclassOfClass: [UITableViewCell class]],
+           @"[%@]tableViewCellClassForDataObject must return a UITableViewCell subclass",
+           NSStringFromClass([self class]));
+
+  // Attempt to deque a cell with the correct reuse identifier
+  NSString* reuseIdentifier = [tableViewCellClass klCellReuseIdentifier];
+  cell = [tableView dequeueReusableCellWithIdentifier: reuseIdentifier];
+
+  if ( cell == nil )
   {
-    return 1;
+    // If we have no cell, create a default cell and set its labels to the expected
+    //  reuse identifier as a convenience to the developer.
+    cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle
+                                  reuseIdentifier: reuseIdentifier];
   }
 
-  - (NSInteger)tableView: (UITableView*)tableView
-   numberOfRowsInSection: (NSInteger)section
-  {
-    return 0;
-  }
+  // Configure the cell.
+  [cell configureWithDataObject: dataObject];
 
-  - (UITableViewCell*)tableView: (UITableView*)tableView
-          cellForRowAtIndexPath: (NSIndexPath*)indexPath
-  {
-    UITableViewCell* cell = nil;
-
-    id dataObject = [self dataObjectForIndexPath: indexPath];
-
-    // Determine the cell class for this data object
-    Class tableViewCellClass = [[self class] tableViewCellClassForDataObject: dataObject];
-
-    NSAssert([tableViewCellClass isSubclassOfClass: [UITableViewCell class]],
-             @"[%@]tableViewCellClassForDataObject must return a UITableViewCell subclass",
-             NSStringFromClass([self class]));
-
-    // Attempt to deque a cell with the correct reuse identifier
-    NSString* reuseIdentifier = [tableViewCellClass klCellReuseIdentifier];
-    cell = [tableView dequeueReusableCellWithIdentifier: reuseIdentifier];
-
-    if ( cell == nil )
-    {
-      // If we have no cell, create a default cell and set its labels to the expected
-      //  reuse identifier as a convenience to the developer.
-      cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle
-                                    reuseIdentifier: reuseIdentifier];
-    }
-
-    // Configure the cell.
-    [cell configureWithDataObject: dataObject];
-
-    return cell;
-  }
+  return cell;
+}
 
 @end

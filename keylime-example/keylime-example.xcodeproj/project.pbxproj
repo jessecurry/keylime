@@ -69,6 +69,8 @@
 		B06373551805963500C0BAB7 /* KLPassthroughTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B06373531805963500C0BAB7 /* KLPassthroughTableViewDelegate.m */; };
 		B06373A01805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */; };
 		B06373A11805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */; };
+		B06373A51805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B06373A41805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m */; };
+		B06373A61805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B06373A41805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		B06373531805963500C0BAB7 /* KLPassthroughTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLPassthroughTableViewDelegate.m; sourceTree = "<group>"; };
 		B063739E1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBlockTableViewDelegate.h; sourceTree = "<group>"; };
 		B063739F1805BDDE00C0BAB7 /* KLBlockTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBlockTableViewDelegate.m; sourceTree = "<group>"; };
+		B06373A31805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSOrderedSetTableViewDataSource.h; path = keylime/NSOrderedSetTableViewDataSource.h; sourceTree = "<group>"; };
+		B06373A41805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSOrderedSetTableViewDataSource.m; path = keylime/NSOrderedSetTableViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +286,6 @@
 				B0637305180350E000C0BAB7 /* KLTableViewDataSource.m */,
 				B063732C18049D6E00C0BAB7 /* NSArray */,
 				B063732F18049D6E00C0BAB7 /* NSOrderedSet */,
-				B063733018049D6E00C0BAB7 /* NSFetchedResultsController */,
 			);
 			name = "Table View";
 			path = ..;
@@ -336,15 +339,10 @@
 		B063732F18049D6E00C0BAB7 /* NSOrderedSet */ = {
 			isa = PBXGroup;
 			children = (
+				B06373A31805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.h */,
+				B06373A41805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m */,
 			);
 			name = NSOrderedSet;
-			sourceTree = "<group>";
-		};
-		B063733018049D6E00C0BAB7 /* NSFetchedResultsController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NSFetchedResultsController;
 			sourceTree = "<group>";
 		};
 		B06373391804A71C00C0BAB7 /* Models */ = {
@@ -560,6 +558,7 @@
 				B063734E1804B67800C0BAB7 /* KLTableViewDelegate.m in Sources */,
 				B06373241803640E00C0BAB7 /* UITableViewCell+keylime.m in Sources */,
 				B06372AF1803435700C0BAB7 /* main.m in Sources */,
+				B06373A51805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m in Sources */,
 				B06372B31803435700C0BAB7 /* KLAppDelegate.m in Sources */,
 				B06372B61803435700C0BAB7 /* keylime_example.xcdatamodeld in Sources */,
 				B06372DD1803454200C0BAB7 /* KLRootViewController.m in Sources */,
@@ -572,6 +571,7 @@
 			files = (
 				B063734A1804B5BA00C0BAB7 /* KLDelegate.m in Sources */,
 				B063733F1804A73900C0BAB7 /* KLPerson.m in Sources */,
+				B06373A61805DB5400C0BAB7 /* NSOrderedSetTableViewDataSource.m in Sources */,
 				B0637329180365A000C0BAB7 /* NSObject+keylime.m in Sources */,
 				B06372CC1803435700C0BAB7 /* keylime_exampleTests.m in Sources */,
 				B06373461804ADF700C0BAB7 /* KLPersonTableViewCell.m in Sources */,

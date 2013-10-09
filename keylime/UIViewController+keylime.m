@@ -97,8 +97,8 @@ static char kKLTableViewDelegatesKey;
 {
   if ( [tableView isKindOfClass: [UITableView class]] )
   {
-    [self.kl_TableViewDataSources removeObjectForKey: tableView.stringIdentifier];
     tableView.dataSource = nil;
+    [self.kl_TableViewDataSources removeObjectForKey: tableView.stringIdentifier];
   }
 
   [tableView reloadData];
@@ -124,8 +124,8 @@ static char kKLTableViewDelegatesKey;
 {
   if ( [tableView isKindOfClass: [UITableView class]] )
   {
-    [self.kl_TableViewDelegates removeObjectForKey: tableView.stringIdentifier];
     tableView.delegate = nil;
+    [self.kl_TableViewDelegates removeObjectForKey: tableView.stringIdentifier];
   }
 }
 

@@ -19,6 +19,7 @@
 NS_ENUM(NSInteger, _TableViewDataSource) {
   TableViewDataSourceNone = -1,
   TableViewDataSourceArray,
+  TableViewDataSourceOrderedSet,
   TableViewDataSourceCount
 };
 
@@ -29,9 +30,13 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
 
   - (IBAction)segmentedControlValueChanged: (id)sender;
 
-  // Data Sources
+  // Content
   @property (readonly) NSArray* arrayContent;
+  @property (readonly) NSOrderedSet* orderedSetContent;
+
+  // Data Sources
   @property (readonly) NSArrayTableViewDataSource* arrayDataSource;
+  @property (readonly) NSOrderedSetTableViewDataSource* orderedSetDataSource;
 
   // Delegates
   @property (readonly) KLBlockTableViewDelegate* blockDelegate;
@@ -64,8 +69,6 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
   [self setDataSource: self.arrayDataSource
              delegate: self.passthroughDelegate
          forTableView: self.tableView];
-         
-  self.tableView.delegate = self;
 }
 
 - (void)registerTableViewCells
@@ -110,9 +113,12 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
                  delegate: self.passthroughDelegate
              forTableView: self.tableView];
       break;
+    case TableViewDataSourceOrderedSet:
+      [self setDataSource: self.orderedSetDataSource
+                 delegate: self.blockDelegate
+             forTableView: self.tableView];
+      break;
     default:
-      [self setDelegate: self.blockDelegate
-           forTableView: self.tableView];
       break;
   }
 }
@@ -131,7 +137,25 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
   KLPerson* sam = [KLPerson personWithFirstName: NSLocalizedString(@"Samuel", @"Sam's first name")
                                        lastName: NSLocalizedString(@"Curry", @"Sam's last name")
                                           image: nil];
-  return @[jesse, tom, sam, @"a string", @5];
+
+  return @[jesse, tom, sam, @"Array"];
+}
+
+- (NSOrderedSet*)orderedSetContent
+{
+  KLPerson* jesse = [KLPerson personWithFirstName: NSLocalizedString(@"Jesse", @"Jesse's first name")
+                                         lastName: NSLocalizedString(@"Lee", @"Jesse's last name")
+                                            image: nil];
+
+  KLPerson* tom = [KLPerson personWithFirstName: NSLocalizedString(@"Tom", @"Tom's first name")
+                                       lastName: NSLocalizedString(@"Wilson", @"Tom's last name")
+                                          image: nil];
+
+  KLPerson* sam = [KLPerson personWithFirstName: NSLocalizedString(@"Samuel", @"Sam's first name")
+                                       lastName: NSLocalizedString(@"Joseph", @"Sam's last name")
+                                          image: nil];
+
+  return [NSOrderedSet orderedSetWithObjects: jesse, tom, sam, @"Ordered Set", nil];
 }
 
 #pragma mark - Data Sources
@@ -139,6 +163,14 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
 {
   NSArrayTableViewDataSource* dataSource = [NSArrayTableViewDataSource
                                             dataSourceWithContent: self.arrayContent];
+
+  return dataSource;
+}
+
+- (NSOrderedSetTableViewDataSource*)orderedSetDataSource
+{
+  NSOrderedSetTableViewDataSource* dataSource = [NSOrderedSetTableViewDataSource
+                                                 dataSourceWithContent: self.orderedSetContent];
 
   return dataSource;
 }

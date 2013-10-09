@@ -39,6 +39,7 @@
 // TableView
 #import "KLTableViewDataSource.h"
 #import "NSArrayTableViewDataSource.h"
+#import "NSOrderedSetTableViewDataSource.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Delegates
