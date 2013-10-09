@@ -29,7 +29,7 @@
  Use this delegate when you just want your UIViewController to act as the tableView delegate.
  */
 @interface KLPassthroughTableViewDelegate : KLTableViewDelegate
-  @property (nonatomic, weak) id<UITableViewDelegate> passthroughDelegate;
+@property (nonatomic, weak) id<UITableViewDelegate> passthroughDelegate;
 
-  + (instancetype)delegateWithPassthroughDelegate: (id<UITableViewDelegate>)passthroughDelegate;
++ (instancetype)delegateWithPassthroughDelegate: (id<UITableViewDelegate>)passthroughDelegate;
 @end

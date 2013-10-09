@@ -24,30 +24,35 @@
 #import "KLPassthroughTableViewDelegate.h"
 
 @implementation KLPassthroughTableViewDelegate
-  @synthesize passthroughDelegate=_passthroughDelegate;
+@synthesize passthroughDelegate=_passthroughDelegate;
 
-  + (instancetype)delegateWithPassthroughDelegate: (id<UITableViewDelegate>)passthroughDelegate
++ (instancetype)delegateWithPassthroughDelegate: (id<UITableViewDelegate>)passthroughDelegate
+{
+  KLPassthroughTableViewDelegate* delegate = [self delegate];
+
+  if ( delegate )
   {
-    KLPassthroughTableViewDelegate* delegate = [self delegate];
-
-    if ( delegate )
-    {
-      delegate.passthroughDelegate = passthroughDelegate;
-    }
-
-    return delegate;
+    delegate.passthroughDelegate = passthroughDelegate;
   }
 
-  // Forward to the passthrough delegate
-  - (void)forwardInvocation: (NSInvocation*)invocation
+  return delegate;
+}
+
+// Forward to the passthrough delegate
+- (BOOL)respondsToSelector: (SEL)aSelector
+{
+  return [self.passthroughDelegate respondsToSelector: aSelector];
+}
+
+- (void)forwardInvocation: (NSInvocation*)invocation
+{
+  if ( [self.passthroughDelegate respondsToSelector: [invocation selector]] )
   {
-    if ( [self.passthroughDelegate respondsToSelector: [invocation selector]] )
-    {
-      [invocation invokeWithTarget: self.passthroughDelegate];
-    }
-    else
-    {
-      [super forwardInvocation: invocation];
-    }
+    [invocation invokeWithTarget: self.passthroughDelegate];
   }
+  else
+  {
+    [super forwardInvocation: invocation];
+  }
+}
 @end
