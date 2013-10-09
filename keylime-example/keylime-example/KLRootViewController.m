@@ -53,7 +53,7 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
                          bundle: nibBundleOrNil];
   if ( self )
   {
-
+    self.title = NSLocalizedString(@"keylime", @"View controller title");
   }
 
   return self;
