@@ -41,7 +41,13 @@
 // Forward to the passthrough delegate
 - (BOOL)respondsToSelector: (SEL)aSelector
 {
-  return [self.passthroughDelegate respondsToSelector: aSelector];
+  // TODO: make sure that this works the way we want it to.
+  BOOL respondsToSelector = [super respondsToSelector: aSelector];
+
+  if ( !respondsToSelector )
+    respondsToSelector = [self.passthroughDelegate respondsToSelector: aSelector];
+
+  return respondsToSelector;
 }
 
 - (void)forwardInvocation: (NSInvocation*)invocation
