@@ -9,5 +9,5 @@
 #import "KLDelegate.h"
 
 @interface KLTableViewDelegate : KLDelegate <UITableViewDelegate>
-
+  @property (nonatomic, weak) UITableView* tableView;
 @end

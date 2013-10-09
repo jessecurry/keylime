@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (keylime)
-+ (Class)klTableViewCellClass;
+
 @end

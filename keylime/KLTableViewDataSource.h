@@ -25,5 +25,6 @@
 #import "KLDataSource.h"
 
 @interface KLTableViewDataSource : KLDataSource <UITableViewDataSource>
+  @property (nonatomic, weak) UITableView* tableView;
   + (Class)tableViewCellClassForDataObject: (id)dataObject;
 @end

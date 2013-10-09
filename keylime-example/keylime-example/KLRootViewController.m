@@ -29,8 +29,12 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
 
   - (IBAction)segmentedControlValueChanged: (id)sender;
 
+  // Data Sources
   @property (readonly) NSArray* arrayContent;
   @property (readonly) NSArrayTableViewDataSource* arrayDataSource;
+
+  // Delegates
+  @property (readonly) KLPassthroughTableViewDelegate* passthroughDelegate;
 @end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,6 +61,7 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
 
   //
   [self setDataSource: self.arrayDataSource
+             delegate: self.passthroughDelegate
          forTableView: self.tableView];
          
   self.tableView.delegate = self;
@@ -101,6 +106,7 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
   {
     case TableViewDataSourceArray:
       [self setDataSource: self.arrayDataSource
+                 delegate: self.passthroughDelegate
              forTableView: self.tableView];
       break;
     default:
@@ -125,12 +131,22 @@ NS_ENUM(NSInteger, _TableViewDataSource) {
   return @[jesse, tom, sam];
 }
 
+#pragma mark - Data Sources
 - (NSArrayTableViewDataSource*)arrayDataSource
 {
   NSArrayTableViewDataSource* dataSource = [NSArrayTableViewDataSource
                                             dataSourceWithContent: self.arrayContent];
 
   return dataSource;
+}
+
+#pragma mark - Delegates
+- (KLPassthroughTableViewDelegate*)passthroughDelegate
+{
+  KLPassthroughTableViewDelegate* delegate = [KLPassthroughTableViewDelegate
+                                              delegateWithPassthroughDelegate: self];
+
+  return delegate;
 }
   
 @end

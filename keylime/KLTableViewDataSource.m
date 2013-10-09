@@ -12,6 +12,8 @@
 #import "UITableViewCell+keylime.h"
 
 @implementation KLTableViewDataSource
+  @synthesize tableView=_tableView;
+  
   + (Class)tableViewCellClassForDataObject: (id)dataObject
   {
     Class tableViewCellClass = NSClassFromString([NSString stringWithFormat: @"%@TableViewCell",

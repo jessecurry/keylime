@@ -9,5 +9,5 @@
 #import "KLTableViewDelegate.h"
 
 @implementation KLTableViewDelegate
-
+  @synthesize tableView=_tableView;
 @end
